@@ -1,17 +1,125 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laww by Sidhant Sardar</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero Section</title>
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & box-sizing */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Hero section wrapper */
+    .hero {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .logo .highlight {
+      color: #ff6347; /* Change this to whatever highlight colour you like */
+    }
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-buttons .nav-button a {
+      font-size: 16px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+    }
+
+    /* Main container */
+    .container {
+      flex: 1; /* fill remaining height */
+      display: flex;
+      width: 100vw;
+      margin: 0 60px;
+    }
+    .container > div {
+      width: 50%;
+      height: 100%;
+    }
+
+    /* Left content */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 40px;
+    }
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* Right image */
+    .hero-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <section class="hero">
-    <h1>Welcome to Laww</h1>
-    <p>Your trusted legal information platform</p>
-    <a href="#contact" class="btn">Contact Us</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">
+        LAW<span class="highlight">W</span>
+      </div>
+      <div class="nav-buttons">
+        <div class="nav-button"><a href="#">Home</a></div>
+        <div class="nav-button"><a href="#">About</a></div>
+        <div class="nav-button"><a href="#">Blogs</a></div>
+      </div>
+    </nav>
+
+    <!-- Hero content + image -->
+    <div class="container">
+      <!-- Left: Heading + subheading -->
+      <div class="hero-content">
+        <h1>Your Hero Heading Here</h1>
+        <p>Your subheading or tag line goes here. Keep it concise and engaging to draw visitors in.</p>
+      </div>
+
+      <!-- Right: Dummy image -->
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/600x400" alt="Hero image placeholder">
+      </div>
+    </div>
   </section>
 </body>
 </html>
